@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ritesh Sharma - Software Engineer, QA Analyst, LeetCode Knight, and full-stack developer focused on NLP, backend systems, QA, and scalable enterprise platforms."
+    />
+    <title>Ritesh Sharma | Software Engineer & QA Analyst</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <canvas class="particle-canvas" id="particleCanvas" aria-hidden="true"></canvas>
+    <canvas class="matrix-canvas" id="matrixCanvas" aria-hidden="true"></canvas>
+
+    <header class="site-header" id="siteHeader">
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="Ritesh Sharma home">&lt;RS /&gt;</a>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="#home" class="nav-btn" aria-label="Home">
+            <span class="btn-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </span>
+            <span class="btn-text">Home</span>
+          </a>
+          <a href="#about" class="nav-btn" aria-label="About">
+            <span class="btn-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </span>
+            <span class="btn-text">About</span>
+          </a>
+          <a href="#skills" class="nav-btn" aria-label="Skills">
+            <span class="btn-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/></svg>
+            </span>
+            <span class="btn-text">Skills</span>
+          </a>
+          <a href="#experience" class="nav-btn" aria-label="Experience">
+            <span class="btn-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H9a2 2 0 0 0-2 2v2H3a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-4V4a2 2 0 0 0-2-2zM9 4h6v2H9V4zm12 16H3V8h18v12z"/></svg>
+            </span>
+            <span class="btn-text">Experience</span>
+          </a>
+          <a href="#projects" class="nav-btn" aria-label="Projects">
+            <span class="btn-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>
+            </span>
+            <span class="btn-text">Projects</span>
+          </a>
+          <a href="#achievements" class="nav-btn" aria-label="Achievements">
+            <span class="btn-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34"/><path d="M12 2a5 5 0 0 0-5 5v3.66c0 .73.3 1.43.83 1.94l1.2 1.16a2 2 0 0 0 2.94 0l1.2-1.16c.53-.51.83-1.21.83-1.94V7a5 5 0 0 0-5-5z"/></svg>
+            </span>
+            <span class="btn-text">Achievements</span>
+          </a>
+          <a href="#contact" class="nav-btn" aria-label="Contact">
+            <span class="btn-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </span>
+            <span class="btn-text">Contact</span>
+          </a>
+          <div class="theme-controls">
+            <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle theme">
+              <span class="btn-icon">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+              </span>
+              <span class="btn-text">Dark Mode</span>
+            </button>
+            <button id="colorThemeToggle" class="theme-btn" type="button" aria-label="Cycle color theme">
+              <span class="btn-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 14.7255 3.09032 17.1962 4.85857 19C5.35339 19.5 5.25 20.5 4.5 21C3.85 21.43 3.32 22 3 22H12Z"></path><circle cx="7.5" cy="10.5" r="1.5" fill="currentColor"></circle><circle cx="11.5" cy="7.5" r="1.5" fill="currentColor"></circle><circle cx="16.5" cy="9.5" r="1.5" fill="currentColor"></circle><circle cx="15.5" cy="14.5" r="1.5" fill="currentColor"></circle></svg>
+              </span>
+              <span class="btn-text">Cyan Theme</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Hello, I'm</p>
+            <h1 class="glitch" data-text="RITESH SHARMA">RITESH SHARMA</h1>
+            <p class="role-line">
+              <span class="prompt">$</span>
+              <span id="typewriter" aria-live="polite">Software Engineer</span>
+              <span class="caret"></span>
+            </p>
+            <p class="hero-summary">
+              Results-driven Software Engineer and QA Analyst building reliable enterprise systems,
+              full-stack products, and NLP-backed experiences from Noida, India.
+            </p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#projects">View Projects</a>
+              <a class="btn secondary" href="assets/Ritesh_Sharma_Resume_4.pdf" download>Download Resume</a>
+            </div>
+            <div class="social-row" aria-label="Social links">
+              <a href="https://github.com/ritesh-sharma30" target="_blank" rel="noreferrer" class="social-btn">
+                <span class="btn-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                <span class="btn-text">GitHub</span>
+              </a>
+              <a href="https://linkedin.com/in/ritesh-30-sharma" target="_blank" rel="noreferrer" class="social-btn">
+                <span class="btn-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </span>
+                <span class="btn-text">LinkedIn</span>
+              </a>
+              <a href="https://leetcode.com/" target="_blank" rel="noreferrer" class="social-btn">
+                <span class="btn-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </span>
+                <span class="btn-text">LeetCode</span>
+              </a>
+            </div>
+            <div class="system-strip" aria-label="Portfolio system status">
+              <span>STATUS ONLINE</span>
+              <span>SYS_ARCH X86_64</span>
+              <span>PORTFOLIO_SYSTEM_V.02</span>
+            </div>
+          </div>
+          <div class="hero-visual reveal">
+            <div class="terminal-panel">
+              <div class="terminal-top">
+                <span></span>
+                <span></span>
+                <span></span>
+                <strong>profile.scan</strong>
+              </div>
+              <pre><code>const engineer = {
+  name: "Ritesh Sharma",
+  focus: ["QA", "Backend", "NLP"],
+  systems: ["Xazina", "Kanchan", "CTM", "HRMS"],
+  leetcode: { rating: 1937, rank: "top 3%" },
+  status: "shipping reliable systems"
+};</code></pre>
+            </div>
+            <div class="cube-wrap" aria-hidden="true">
+              <div class="cube">
+                <span class="face front"></span>
+                <span class="face back"></span>
+                <span class="face right"></span>
+                <span class="face left"></span>
+                <span class="face top"></span>
+                <span class="face bottom"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#about" aria-label="Scroll to about"><span></span></a>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="section-heading reveal">
+          <p class="eyebrow">[ about ]</p>
+          <h2>Engineer For Reliable Products</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p>
+              I translate complex business requirements into scalable technical solutions across
+              enterprise platforms. My work spans database architecture, requirements analysis,
+              structured QA, RESTful APIs, and full-stack delivery.
+            </p>
+            <p>
+              I am currently a Quality Assurance Engineer and Technical Analyst at Saitec
+              International, where I support Agile delivery across enterprise systems while keeping
+              defects, ambiguity, and release risk under control.
+            </p>
+            <div class="highlight">
+              <span>LeetCode Knight</span>
+              <strong>1937 rating</strong>
+              <em>Top ~3% globally</em>
+            </div>
+          </div>
+          <div class="stats-grid reveal">
+            <article>
+              <strong data-counter="1">0</strong>
+              <span>Years Experience</span>
+            </article>
+            <article>
+              <strong data-counter="50">0</strong>
+              <span>Bugs Resolved</span>
+            </article>
+            <article>
+              <strong data-counter="1937">0</strong>
+              <span>LeetCode Rating</span>
+            </article>
+            <article>
+              <strong data-counter="4">0</strong>
+              <span>Clients Served</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills-section" id="skills">
+        <div class="section-heading reveal">
+          <p class="eyebrow">[ skills ]</p>
+          <h2>Technical Stack</h2>
+        </div>
+        <div class="skills-layout">
+          <div class="rings-grid reveal">
+            <article class="skill-ring" data-percent="92">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <circle cx="60" cy="60" r="48"></circle>
+                <circle class="ring-progress" cx="60" cy="60" r="48"></circle>
+              </svg>
+              <strong>Python</strong>
+              <span>92%</span>
+            </article>
+            <article class="skill-ring" data-percent="88">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <circle cx="60" cy="60" r="48"></circle>
+                <circle class="ring-progress" cx="60" cy="60" r="48"></circle>
+              </svg>
+              <strong>SQL</strong>
+              <span>88%</span>
+            </article>
+            <article class="skill-ring" data-percent="84">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <circle cx="60" cy="60" r="48"></circle>
+                <circle class="ring-progress" cx="60" cy="60" r="48"></circle>
+              </svg>
+              <strong>Java</strong>
+              <span>84%</span>
+            </article>
+            <article class="skill-ring" data-percent="80">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <circle cx="60" cy="60" r="48"></circle>
+                <circle class="ring-progress" cx="60" cy="60" r="48"></circle>
+              </svg>
+              <strong>NLP</strong>
+              <span>80%</span>
+            </article>
+          </div>
+          <div class="skill-groups reveal">
+            <article>
+              <h3>Languages</h3>
+              <div class="chips">
+                <span>Python</span><span>Java</span><span>C++</span><span>C</span><span>SQL</span><span>Kotlin</span>
+              </div>
+            </article>
+            <article>
+              <h3>Databases</h3>
+              <div class="chips">
+                <span>SQL Server</span><span>MySQL</span><span>MongoDB</span><span>SSMS</span>
+              </div>
+            </article>
+            <article>
+              <h3>Frameworks</h3>
+              <div class="chips">
+                <span>Django</span><span>Flask</span><span>Jetpack Compose</span>
+              </div>
+            </article>
+            <article>
+              <h3>AI / ML</h3>
+              <div class="chips">
+                <span>NLP</span><span>GPT</span><span>BERT</span><span>Sentiment Analysis</span><span>ML</span>
+              </div>
+            </article>
+            <article>
+              <h3>Tools</h3>
+              <div class="chips">
+                <span>Git</span><span>GitHub</span><span>VS Code</span><span>IntelliJ</span><span>Power BI</span><span>Tableau</span>
+              </div>
+            </article>
+            <article>
+              <h3>Concepts</h3>
+              <div class="chips">
+                <span>DSA</span><span>System Architecture</span><span>REST APIs</span><span>CI/CD</span><span>Agile</span>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="code-window reveal" aria-label="Animated terminal skills window">
+          <div class="terminal-top">
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong>skills.build</strong>
+          </div>
+          <pre><code id="codeTyper"></code></pre>
+        </div>
+      </section>
+
+      <section class="section experience-section" id="experience">
+        <div class="section-heading reveal">
+          <p class="eyebrow">[ experience ]</p>
+          <h2>Enterprise Delivery Timeline</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span>Sep 2025 - Present</span>
+                <span>Noida, India</span>
+              </div>
+              <h3>Quality Assurance Engineer & Technical Analyst</h3>
+              <p>Saitec International</p>
+              <ul>
+                <li>Architected database schemas for Xazina, supporting 10,000+ SKU records with referential integrity.</li>
+                <li>Translated requirements from 4 enterprise client engagements, cutting rework cycles by an estimated 20%.</li>
+                <li>Resolved 50+ critical SQL and architectural defects, improving system uptime by 15%.</li>
+                <li>Managed SDLC for Kanchan, CTM, and HRMS while maintaining sub-24-hour SLA compliance.</li>
+                <li>Led stakeholder-engineering communication through daily stand-ups, accelerating delivery timelines by 10%.</li>
+              </ul>
+              <div class="tags"><span>SQL</span><span>Agile</span><span>SDLC</span><span>System Design</span><span>QA</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="projects">
+        <div class="section-heading reveal">
+          <p class="eyebrow">[ projects ]</p>
+          <h2>Selected Work</h2>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card tilt-card reveal">
+            <div class="project-visual ai-visual" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="project-body">
+              <p class="project-date">Oct 2024</p>
+              <h3>MindEase - AI Mental Health Assistant</h3>
+              <p class="project-role">Role: Lead AI Engineer / NLP Architect</p>
+              <p>Conversational chatbot with GPT + BERT NLP pipelines and Flask APIs.</p>
+              <ul>
+                <li>85%+ sentiment-classification accuracy on a 500-sample validation set.</li>
+                <li>Sub-300ms API response latency for 100+ concurrent test users.</li>
+                <li>30% higher simulated engagement over a rule-based baseline.</li>
+              </ul>
+              <div class="tags"><span>Python</span><span>Flask</span><span>GPT</span><span>BERT</span><span>NLP</span></div>
+              <div class="project-links">
+                <a href="https://github.com/ritesh-sharma30" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://riteshsharma30.vercel.app" target="_blank" rel="noreferrer">Live Demo</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card tilt-card reveal">
+            <div class="project-visual booking-visual" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="project-body">
+              <p class="project-date">Aug 2024</p>
+              <h3>Cabotel - Real-Time Cab & Hotel Booking</h3>
+              <p class="project-role">Role: Full Stack Systems Developer</p>
+              <p>Full-stack booking platform connecting transportation and accommodation modules.</p>
+              <ul>
+                <li>25% faster average booking-flow completion through UI/UX optimization.</li>
+                <li>Unified data model removed 3 redundant API calls per session.</li>
+                <li>18% lower backend processing time with MongoDB-backed data design.</li>
+              </ul>
+              <div class="tags"><span>Django</span><span>Python</span><span>MongoDB</span><span>JavaScript</span></div>
+              <div class="project-links">
+                <a href="https://github.com/ritesh-sharma30" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://riteshsharma30.vercel.app" target="_blank" rel="noreferrer">Live Demo</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card tilt-card reveal">
+            <div class="project-visual music-visual" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="project-body">
+              <p class="project-date">Jun 2024</p>
+              <h3>Rythmonex - Music Recommendation Engine</h3>
+              <p class="project-role">Role: Android Mobile Engineer</p>
+              <p>Kotlin and Jetpack Compose recommendation engine built with MVC architecture.</p>
+              <ul>
+                <li>90%+ playlist relevance scores from listening-habit analysis.</li>
+                <li>MVC separation reduced coupling across data, logic, and UI layers.</li>
+                <li>40% faster feature iteration compared with the initial prototype.</li>
+              </ul>
+              <div class="tags"><span>Kotlin</span><span>Jetpack Compose</span><span>MVC</span></div>
+              <div class="project-links">
+                <a href="https://github.com/ritesh-sharma30" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://riteshsharma30.vercel.app" target="_blank" rel="noreferrer">Live Demo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section achievements-section" id="achievements">
+        <div class="section-heading reveal">
+          <p class="eyebrow">[ achievements ]</p>
+          <h2>Signals & Certifications</h2>
+        </div>
+        <div class="badge-grid">
+          <article class="badge-card reveal">
+            <strong>LeetCode Knight</strong>
+            <span>Rating 1937, top ~3% globally</span>
+          </article>
+          <article class="badge-card reveal">
+            <strong>HackerRank Java</strong>
+            <span>5-Star Gold Badge, top 5% globally</span>
+          </article>
+          <article class="badge-card reveal">
+            <strong>Event Coordinator</strong>
+            <span>Managed 1,000+ participants across 3 annual technical fests</span>
+          </article>
+          <article class="badge-card reveal">
+            <strong>Certifications</strong>
+            <span>Discrete Mathematics, Probability & Statistics, IoT Systems, Tableau Data Visualization</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section education-section" id="education">
+        <div class="section-heading reveal">
+          <p class="eyebrow">[ education ]</p>
+          <h2>Academic Foundation</h2>
+        </div>
+        <div class="education-grid">
+          <article class="education-card reveal">
+            <span>Aug 2021 - Jul 2025</span>
+            <h3>B.E. Computer Science</h3>
+            <p>Chandigarh University, Punjab, India</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="section-heading reveal">
+          <p class="eyebrow">[ contact ]</p>
+          <h2>Start A Conversation</h2>
+        </div>
+        <div class="contact-grid">
+          <form class="contact-terminal reveal" id="contactForm">
+            <div class="terminal-top">
+              <span></span>
+              <span></span>
+              <span></span>
+              <strong>message.compose</strong>
+            </div>
+            <label>
+              <span>$ name</span>
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+            <label>
+              <span>$ email</span>
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label>
+              <span>$ message</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button class="btn primary" type="submit">Send Message</button>
+            <p class="form-status" id="formStatus" role="status"></p>
+          </form>
+          <aside class="contact-panel reveal">
+            <p>Email</p>
+            <a href="mailto:riteshsharma200106@gmail.com">riteshsharma200106@gmail.com</a>
+            <p>Phone</p>
+            <a href="tel:+919896159249">+91 98961 59249</a>
+            <p>Location</p>
+            <span>Noida, India</span>
+            <div class="social-row">
+              <a href="https://github.com/ritesh-sharma30" target="_blank" rel="noreferrer" class="social-btn">
+                <span class="btn-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                <span class="btn-text">GitHub</span>
+              </a>
+              <a href="https://linkedin.com/in/ritesh-30-sharma" target="_blank" rel="noreferrer" class="social-btn">
+                <span class="btn-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </span>
+                <span class="btn-text">LinkedIn</span>
+              </a>
+              <a href="https://riteshsharma30.vercel.app" target="_blank" rel="noreferrer" class="social-btn">
+                <span class="btn-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </span>
+                <span class="btn-text">Portfolio</span>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built with care and lots of coffee by Ritesh Sharma</p>
+      <p>Copyright <span id="year">2026</span></p>
+      <a class="back-top" href="#home" aria-label="Back to top">^</a>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
